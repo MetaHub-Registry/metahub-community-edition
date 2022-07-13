@@ -1,10 +1,9 @@
-# Community Edition
+# Community Edition **BETA**
 
-GitOps driven set of manifest collections and profiles to drive the MetaHub Community Edition. The goal is to define collection of commonly used and public container images, for everyone to use.
+GitOps driven set of manifest collections and profiles to drive the **BETA** version of *MetaHub Community Edition*. The goal is to define collection of commonly used and public container images, for everyone to use.
 
-### Redirect to **BETA**
+## BETA Version
 
-You are currently viewing the `main` branch, which will eventually be populated once the **BETA** is concluded.
+The current version used is a **BETA** version to refine the definitions and structures used within the *MetaHub Community Edition*.
 
-Please switch to the `beta` branch to see the action.
-
+**Be aware** that the current version is not stable and may change at any time. 
