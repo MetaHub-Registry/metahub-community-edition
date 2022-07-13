@@ -1,0 +1,5 @@
+manifests:
+  - name: biocontainers/multiqc
+    tag: 1.11--pyhdfd78af_0
+    manifests:
+      - image: quay.io/biocontainers/multiqc:1.11--pyhdfd78af_0

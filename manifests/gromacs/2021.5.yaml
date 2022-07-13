@@ -1,0 +1,35 @@
+manifests:
+  - name: gromacs
+    tag: 2021.5
+    manifests:
+      - image: docker.io/qnib/gromacs-2021.5_gcc-7.3.1:x86_64_v2
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v4
+        platform: 
+          features: [cpu:cascadelake]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-11.3.0:zen3
+        platform: 
+          features: [cpu:zen3]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:haswell
+        platform: 
+          features: [cpu:haswell]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:broadwell
+        platform: 
+          features: [cpu:broadwell]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v3
+        platform: 
+          features: [cpu:x86_64_v3]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v4
+        platform: 
+          features: [cpu:x86_64_v4]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:skylake_avx512
+        platform: 
+          features: [cpu:skylake_avx512]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:skylake
+        platform: 
+          features: [cpu:skylake]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:zen
+        platform: 
+          features: [cpu:zen]
+      - image: quay.io/cqnib/gromacs-2021.5_gcc-11.3.0:zen2
+        platform: 
+          features: [cpu:zen2]
