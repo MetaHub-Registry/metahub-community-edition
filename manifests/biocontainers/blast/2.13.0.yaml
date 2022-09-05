@@ -2,7 +2,7 @@ manifests:
   - name: biocontainers/blast
     tag: 2.13.0
     manifests:
-      - image: docker.io/ncbi/blast:2.13.0
+      - image: quay.io/biocontainers/blast:2.13.0--hf3cf87c_0
         platform:
           os: linux
           arch: amd64
