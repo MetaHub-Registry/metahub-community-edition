@@ -2,11 +2,11 @@ manifests:
   - name: qnib/featuretest
     tag: latest
     manifests:
-      - image: docker.io/qnib/plain-featuretest:generic
+      - image: quay.io/cqnib/plain-featuretest:generic
       - image: quay.io/cqnib/plain-featuretest:arch-cascadelake
         platform: 
           features: [cpu:cascadelake]
-      - image: docker.io/qnib/plain-featuretest:arch-skylake
+      - image: quay.io/cqnib/plain-featuretest:arch-skylake
         platform: 
           features: [cpu:skylake]
       - image: quay.io/cqnib/plain-featuretest:arch-skylake_avx512
