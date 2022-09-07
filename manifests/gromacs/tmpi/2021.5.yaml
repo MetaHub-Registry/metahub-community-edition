@@ -1,18 +1,24 @@
 manifests:
-  - name: gromacs
+  - name: gromacs/tmpi
     tag: 2021.5
     manifests:
       - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v4
         platform:
           os: linux
           arch: amd64
-      - image: quay.io/cqnib/gromacs-2021.5_gcc-11.3.0:zen3
+      - image: quay.io/cqnib/gromacs/gcc-7.3.1/2021.5/tmpi:skylake_avx512
         platform:
           os: linux
           arch: amd64
-          features: [cpu:zen3]
+          features: [cpu:skylake_avx512]
       - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:aarch64
         platform:
           os: linux
+          arch: amd64
+      - image: quay.io/cqnib/gromacs/gcc-7.3.1/2021.5/tmpi:graviton2
+        platform:
+          os: linux
           arch: arm64
+          features: [cpu:graviton2]
+        
       
