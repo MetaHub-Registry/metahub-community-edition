@@ -20,5 +20,3 @@ manifests:
           os: linux
           arch: arm64
           features: [cpu:graviton2]
-        
-      
