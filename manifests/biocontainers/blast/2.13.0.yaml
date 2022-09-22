@@ -6,7 +6,7 @@ manifests:
         platform:
           os: linux
           arch: amd64
-      - image: registry.gitlab.com/qnib-pub-containers/biocontainers/blast:2-13-0-arm64
+      - image: registry.gitlab.com/qnib-pub-containers/biocontainers/blast:2-13-0-5-arm64
         platform:
           os: linux
           arch: arm64
