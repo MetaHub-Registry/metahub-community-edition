@@ -1,0 +1,24 @@
+manifests:
+  - name: biocontainers/blast
+    tag: 2.12.0--pl5262h3289130_0
+    manifests:
+      - image: quay.io/cqnib/biocontainers-blast:2.12.0-amd64
+        platform:
+          os: linux
+          arch: amd64
+      - image: quay.io/cqnib/biocontainers-blast:2.12.0-arm64
+        platform:
+          os: linux
+          arch: arm64
+      - image: quay.io/cqnib/biocontainers-blast:2.12.0-icelake
+        platform:
+          os: linux
+          arch: amd64
+          features: [cpu:icelake]
+      - image: quay.io/cqnib/biocontainers-blast:2.12.0-zen2
+        platform:
+          os: linux
+          arch: amd64
+          features: [cpu:zen2]
+
+      

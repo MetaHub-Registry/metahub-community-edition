@@ -35,12 +35,12 @@ manifests:
         platform:
           os: linux
           arch: arm64
-          features: [graviton2]
+          features: [cpu:graviton2]
       - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm64-graviton2
         platform:
           os: linux
           arch: arm64
-          features: [graviton3]
+          features: [cpu:graviton3]
       - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm_v6-generic
         platform:
           os: linux
