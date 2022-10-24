@@ -4,6 +4,10 @@ manifests:
         platform:
           arch: amd64
           os: linux
+      - image: quay.io/cqnib/spack/bbmap:38.93-aarch64 
+        platform:
+          arch: arm64
+          os: linux
     name: biocontainers/bbmap
     tag: 38.93--he522d1c_0
 

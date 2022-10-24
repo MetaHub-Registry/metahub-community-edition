@@ -4,6 +4,10 @@ manifests:
         platform:
           arch: amd64
           os: linux
+      - image: quay.io/cqnib/spack/multiqc:1.13-aarch64
+        platform:
+          arch: arm64
+          os: linux
     name: biocontainers/multiqc
     tag: 1.13--pyhdfd78af_0
 

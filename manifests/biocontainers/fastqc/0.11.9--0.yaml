@@ -4,5 +4,9 @@ manifests:
         platform:
           arch: amd64
           os: linux
+      - image: quay.io/cqnib/spack/fastqc:0.11.9-aarch64  
+        platform:
+          arch: arm64
+          os: linux
     name: biocontainers/fastqc
     tag: 0.11.9--0

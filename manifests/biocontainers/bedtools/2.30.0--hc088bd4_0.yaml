@@ -4,6 +4,10 @@ manifests:
         platform:
           arch: amd64
           os: linux
+      - image: quay.io/cqnib/spack/bedtools:2.30.0-aarch64
+        platform:
+          arch: arm64
+          os: linux
     name: biocontainers/bedtools
     tag: 2.30.0--hc088bd4_0
 
