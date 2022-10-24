@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/multiqc:1.13--pyhdfd78af_0
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/multiqc
+    tag: 1.13--pyhdfd78af_0
+

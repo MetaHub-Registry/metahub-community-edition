@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/samtools:1.15.1--h1170115_0
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/samtools
+    tag: 1.15.1--h1170115_0
+

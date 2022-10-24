@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/rseqc:3.0.1--py37h516909a_1
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/rseqc
+    tag: 3.0.1--py37h516909a_1
+

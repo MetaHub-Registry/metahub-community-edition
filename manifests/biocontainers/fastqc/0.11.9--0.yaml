@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/fastqc:0.11.9--0
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/fastqc
+    tag: 0.11.9--0
+

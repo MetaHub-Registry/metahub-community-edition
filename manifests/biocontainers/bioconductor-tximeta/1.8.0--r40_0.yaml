@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/bioconductor-tximeta:1.8.0--r40_0
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/bioconductor-tximeta
+    tag: 1.8.0--r40_0
+

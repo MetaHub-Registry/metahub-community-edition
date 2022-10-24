@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/picard:2.27.4--hdfd78af_0
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/picard
+    tag: 2.27.4--hdfd78af_0
+
