@@ -1,6 +1,6 @@
 manifests:
   - manifests:
-      - image: quay.io/biocontainers/qualimap:2.2.2d--1
+      - image: public.ecr.aws/biocontainers/qualimap:2.2.2d--1
         platform:
           arch: amd64
           os: linux
