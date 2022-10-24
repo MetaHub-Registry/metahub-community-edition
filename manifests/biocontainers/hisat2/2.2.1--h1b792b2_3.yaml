@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/hisat2:2.2.1--h1b792b2_3
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/hisat2
+    tag: 2.2.1--h1b792b2_3
+

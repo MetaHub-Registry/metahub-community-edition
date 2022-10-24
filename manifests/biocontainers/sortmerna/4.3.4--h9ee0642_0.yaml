@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/sortmerna:4.3.4--h9ee0642_0
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/sortmerna
+    tag: 4.3.4--h9ee0642_0
+

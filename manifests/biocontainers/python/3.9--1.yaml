@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/python:3.9--1
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/python
+    tag: 3.9--1
+

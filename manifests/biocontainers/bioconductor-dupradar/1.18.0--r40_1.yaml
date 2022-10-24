@@ -1,0 +1,9 @@
+manifests:
+  - manifests:
+      - image: quay.io/biocontainers/bioconductor-dupradar:1.18.0--r40_1
+        platform:
+          arch: amd64
+          os: linux
+    name: biocontainers/bioconductor-dupradar
+    tag: 1.18.0--r40_1
+
