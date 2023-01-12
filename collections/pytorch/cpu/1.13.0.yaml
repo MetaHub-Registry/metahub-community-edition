@@ -6,12 +6,3 @@ manifests:
         platform:
           os: linux
           arch: arm64
-        annotations:
-          org.supercontainers.hardware.cpu.arch: armv8.4-a
-          org.supercontainers.hardware.cpu.acl.arch: armv8.2-a
-          org.supercontainers.hardware.cpu.acl.version: v22.11
-          org.supercontainers.software.blas.implementation: openblas
-          org.supercontainers.software.openblas.version: 0.3.20
-          org.supercontainers.software.ninja.version: 1.9.0
-          org.supercontainers.mpi.provider: none
-          
