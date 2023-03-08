@@ -1,9 +1,7 @@
+name: biocontainers/preseq
+tag: 3.1.2--h445547b_2
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/preseq:3.1.2--h445547b_2
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/preseq
-    tag: 3.1.2--h445547b_2
-
+  - image: quay.io/biocontainers/preseq:3.1.2--h445547b_2
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

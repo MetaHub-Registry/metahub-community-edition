@@ -1,9 +1,6 @@
+name: biocontainers/gffread
+tag: 0.12.1--h8b12597_0
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/gffread:0.12.1--h8b12597_0
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/gffread
-    tag: 0.12.1--h8b12597_0
-
+  - image: quay.io/biocontainers/gffread:0.12.1--h8b12597_0
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform

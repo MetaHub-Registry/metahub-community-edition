@@ -1,9 +1,7 @@
+name: biocontainers/perl
+tag: 5.26.2
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/perl:5.26.2
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/perl
-    tag: 5.26.2
-
+  - image: quay.io/biocontainers/perl:5.26.2
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

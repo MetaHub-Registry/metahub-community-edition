@@ -1,13 +1,9 @@
+name: biocontainers/bedtools
+tag: 2.30.0--hc088bd4_0
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/bedtools:2.30.0--hc088bd4_0
-        platform:
-          arch: amd64
-          os: linux
-      - image: quay.io/cqnib/spack/bedtools:2.30.0-aarch64
-        platform:
-          arch: arm64
-          os: linux
-    name: biocontainers/bedtools
-    tag: 2.30.0--hc088bd4_0
-
+  - image: quay.io/biocontainers/bedtools:2.30.0--hc088bd4_0
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+  - image: quay.io/cqnib/spack/bedtools:2.30.0-aarch64
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform

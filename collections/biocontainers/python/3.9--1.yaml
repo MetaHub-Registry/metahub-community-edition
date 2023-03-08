@@ -1,9 +1,7 @@
+name: biocontainers/python
+tag: 3.9--1
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/python:3.9--1
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/python
-    tag: 3.9--1
-
+  - image: quay.io/biocontainers/python:3.9--1
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

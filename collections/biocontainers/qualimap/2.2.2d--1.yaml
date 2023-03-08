@@ -1,9 +1,7 @@
+name: biocontainers/qualimap
+tag: 2.2.2d--1
 manifests:
-  - manifests:
-      - image: public.ecr.aws/biocontainers/qualimap:2.2.2d--1
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/qualimap
-    tag: 2.2.2d--1
-
+  - image: public.ecr.aws/biocontainers/qualimap:2.2.2d--1
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

@@ -1,0 +1,7 @@
+name: qnib/featuretest
+tag: zen3
+manifests:
+  - image: quay.io/cqnib/plain-featuretest:arch-zen3
+    annotations:
+      org.supercontainers.hardware.cpu.target: microarch
+      org.supercontainers.hardware.cpu.target.microarch: zen3

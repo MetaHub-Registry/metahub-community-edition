@@ -1,9 +1,7 @@
+name: biocontainers/samtools
+tag: 1.15.1--h1170115_0
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/samtools:1.15.1--h1170115_0
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/samtools
-    tag: 1.15.1--h1170115_0
-
+  - image: quay.io/biocontainers/samtools:1.15.1--h1170115_0
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

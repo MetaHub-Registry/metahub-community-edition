@@ -1,9 +1,7 @@
+name: biocontainers/mulled-v2-8849acf39a43cdd6c839a369a74c0adc823e2f91
+tag: ab110436faf952a33575c64dd74615a84011450b-0
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/mulled-v2-8849acf39a43cdd6c839a369a74c0adc823e2f91:ab110436faf952a33575c64dd74615a84011450b-0
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/mulled-v2-8849acf39a43cdd6c839a369a74c0adc823e2f91
-    tag: ab110436faf952a33575c64dd74615a84011450b-0
+  - image: quay.io/biocontainers/mulled-v2-8849acf39a43cdd6c839a369a74c0adc823e2f91:ab110436faf952a33575c64dd74615a84011450b-0
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
 
