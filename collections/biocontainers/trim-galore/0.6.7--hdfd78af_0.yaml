@@ -1,9 +1,7 @@
+name: biocontainers/trim-galore
+tag: 0.6.7--hdfd78af_0
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/trim-galore:0.6.7--hdfd78af_0
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/trim-galore
-    tag: 0.6.7--hdfd78af_0
-
+  - image: quay.io/biocontainers/trim-galore:0.6.7--hdfd78af_0
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

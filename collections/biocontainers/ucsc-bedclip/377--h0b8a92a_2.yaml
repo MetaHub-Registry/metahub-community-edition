@@ -1,9 +1,7 @@
+name: biocontainers/ucsc-bedclip
+tag: 377--h0b8a92a_2
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/ucsc-bedclip:377--h0b8a92a_2
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/ucsc-bedclip
-    tag: 377--h0b8a92a_2
-
+  - image: quay.io/biocontainers/ucsc-bedclip:377--h0b8a92a_2
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

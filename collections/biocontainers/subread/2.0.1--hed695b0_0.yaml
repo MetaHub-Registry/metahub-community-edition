@@ -1,9 +1,7 @@
+name: biocontainers/subread
+tag: 2.0.1--hed695b0_0
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/subread:2.0.1--hed695b0_0
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/subread
-    tag: 2.0.1--hed695b0_0
-
+  - image: quay.io/biocontainers/subread:2.0.1--hed695b0_0
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    

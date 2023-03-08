@@ -1,9 +1,7 @@
+name: biocontainers/ucsc-bedgraphtobigwig
+tag: 377--h446ed27_1
 manifests:
-  - manifests:
-      - image: quay.io/biocontainers/ucsc-bedgraphtobigwig:377--h446ed27_1
-        platform:
-          arch: amd64
-          os: linux
-    name: biocontainers/ucsc-bedgraphtobigwig
-    tag: 377--h446ed27_1
-
+  - image: quay.io/biocontainers/ucsc-bedgraphtobigwig:377--h446ed27_1
+    annotations:
+      org.supercontainers.hardware.cpu.target: platform
+    
