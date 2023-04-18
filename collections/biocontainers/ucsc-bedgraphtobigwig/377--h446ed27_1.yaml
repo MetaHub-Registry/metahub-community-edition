@@ -1,7 +1,4 @@
 name: biocontainers/ucsc-bedgraphtobigwig
 tag: 377--h446ed27_1
 manifests:
-  - image: quay.io/biocontainers/ucsc-bedgraphtobigwig:377--h446ed27_1
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    
+  - image: quay.io/biocontainers/ucsc-bedgraphtobigwig:377--h446ed27_1    

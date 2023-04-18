@@ -1,7 +1,4 @@
 name: biocontainers/subread
 tag: 2.0.1--hed695b0_0
 manifests:
-  - image: quay.io/biocontainers/subread:2.0.1--hed695b0_0
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    
+  - image: quay.io/biocontainers/subread:2.0.1--hed695b0_0    

@@ -2,5 +2,3 @@ name: biocontainers/gffread
 tag: 0.12.1--h8b12597_0
 manifests:
   - image: quay.io/biocontainers/gffread:0.12.1--h8b12597_0
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform

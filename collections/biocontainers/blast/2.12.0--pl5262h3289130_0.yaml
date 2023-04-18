@@ -2,16 +2,8 @@ name: biocontainers/blast
 tag: 2.12.0--pl5262h3289130_0
 manifests:
   - image: quay.io/cqnib/biocontainers-blast:2.12.0-amd64
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
   - image: quay.io/cqnib/biocontainers-blast:2.12.0-arm64
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
   - image: quay.io/cqnib/biocontainers-blast:2.12.0-icelake
-    annotations:
-      org.supercontainers.hardware.cpu.target.microarch: icelake
   - image: quay.io/cqnib/biocontainers-blast:2.12.0-zen2
-    annotations:
-      org.supercontainers.hardware.cpu.target.microarch: zen2
 
       

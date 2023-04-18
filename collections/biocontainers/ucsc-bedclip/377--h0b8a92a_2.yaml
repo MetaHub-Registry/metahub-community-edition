@@ -2,6 +2,3 @@ name: biocontainers/ucsc-bedclip
 tag: 377--h0b8a92a_2
 manifests:
   - image: quay.io/biocontainers/ucsc-bedclip:377--h0b8a92a_2
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    

@@ -2,7 +2,3 @@ name: biocontainers/bioconductor-tximeta
 tag: 1.8.0--r40_0
 manifests:
   - image: quay.io/biocontainers/bioconductor-tximeta:1.8.0--r40_0
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    
-    

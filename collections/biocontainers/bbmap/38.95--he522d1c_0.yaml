@@ -4,5 +4,3 @@ manifests:
   - image: quay.io/biocontainers/bbmap:38.95--he522d1c_0
     platform:
       arch: amd64
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform

@@ -1,7 +1,4 @@
 name: biocontainers/sortmerna
 tag: 4.3.4--h9ee0642_0
 manifests:
-  - image: quay.io/biocontainers/sortmerna:4.3.4--h9ee0642_0
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    
+  - image: quay.io/biocontainers/sortmerna:4.3.4--h9ee0642_0    

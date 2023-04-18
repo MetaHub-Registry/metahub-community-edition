@@ -2,6 +2,3 @@ name: biocontainers/bioconductor-dupradar
 tag: 1.18.0--r40_1
 manifests:
   - image: quay.io/biocontainers/bioconductor-dupradar:1.18.0--r40_1
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    

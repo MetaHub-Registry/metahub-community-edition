@@ -1,7 +1,4 @@
 name: biocontainers/samtools
 tag: 1.15.1--h1170115_0
 manifests:
-  - image: quay.io/biocontainers/samtools:1.15.1--h1170115_0
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    
+  - image: quay.io/biocontainers/samtools:1.15.1--h1170115_0    
