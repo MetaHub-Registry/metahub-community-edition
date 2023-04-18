@@ -3,11 +3,9 @@ tag: 2021.5
 manifests:
   - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:aarch64
     annotations:
-      org.supercontainers.hardware.cpu.target: platform
       org.supercontainers.mpi.provider: threadmpi
   - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v2
     annotations:
-      org.supercontainers.hardware.cpu.target: platform
       org.supercontainers.mpi.provider: threadmpi
   - image: quay.io/cqnib/gromacs/gcc-7.3.1/2021.5/tmpi:skylake_avx512
     annotations:
@@ -26,9 +24,6 @@ manifests:
       org.supercontainers.hardware.cpu.target.generic: x86_64_v4
       org.supercontainers.mpi.implementation: threadmpi
   - image: quay.io/cqnib/gromacs/gcc-7.3.1/2021.5/tmpi:graviton2
-    platform:
-      os: linux
-      arch: arm64
     annotations:
       org.supercontainers.mpi.provider: threadmpi
       org.supercontainers.hardware.cpu.target: microarch

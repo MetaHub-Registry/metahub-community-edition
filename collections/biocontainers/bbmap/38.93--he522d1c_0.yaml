@@ -2,12 +2,4 @@ name: biocontainers/bbmap
 tag: 38.93--he522d1c_0
 manifests:
   - image: quay.io/biocontainers/bbmap:38.93--he522d1c_0
-    platform:
-      arch: amd64
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-  - image: quay.io/cqnib/spack/bbmap:38.93-aarch64 
-    platform:
-      arch: arm64
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
+  - image: quay.io/cqnib/spack/bbmap:38.93-aarch64

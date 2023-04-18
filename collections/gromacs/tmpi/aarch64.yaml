@@ -1,7 +1,0 @@
-name: gromacs/tmpi
-tag: aarch64
-manifests:
-  - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:aarch64
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-      org.supercontainers.mpi.provider: threadmpi

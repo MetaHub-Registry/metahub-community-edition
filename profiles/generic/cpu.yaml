@@ -1,2 +1,0 @@
-## TODO: Make the second rule 'cpu.target=null' (lack of an annotation)
-rule: os:linux=true && cpu:generic=true
