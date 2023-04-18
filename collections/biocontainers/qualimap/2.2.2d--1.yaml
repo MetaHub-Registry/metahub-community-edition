@@ -2,6 +2,3 @@ name: biocontainers/qualimap
 tag: 2.2.2d--1
 manifests:
   - image: public.ecr.aws/biocontainers/qualimap:2.2.2d--1
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    

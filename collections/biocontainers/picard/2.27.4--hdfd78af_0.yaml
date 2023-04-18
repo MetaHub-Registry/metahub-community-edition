@@ -2,6 +2,4 @@ name: biocontainers/picard
 tag: 2.27.4--hdfd78af_0
 manifests:
   - image: quay.io/biocontainers/picard:2.27.4--hdfd78af_0
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
     

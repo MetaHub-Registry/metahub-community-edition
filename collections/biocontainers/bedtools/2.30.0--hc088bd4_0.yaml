@@ -2,8 +2,4 @@ name: biocontainers/bedtools
 tag: 2.30.0--hc088bd4_0
 manifests:
   - image: quay.io/biocontainers/bedtools:2.30.0--hc088bd4_0
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
   - image: quay.io/cqnib/spack/bedtools:2.30.0-aarch64
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
