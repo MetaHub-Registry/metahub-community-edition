@@ -1,64 +1,43 @@
 name: qnib/featuretest
 tag: latest
 manifests:
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-amd64-generic
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-platform
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-arm64-platform
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_icelake
     annotations:
-      org.supercontainers.hardware.cpu.target: platform
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm64-generic
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-amd64-generic
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-      org.supercontainers.mpi.implementation: mpich
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm64-generic
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-      org.supercontainers.mpi.implementation: mpich
-  - image: quay.io/cqnib/plain-featuretest:arch-cascadelake
+      org.supercontainers.hardware.cpu.target: microarch
+      org.supercontainers.hardware.cpu.target.microarch: icelake
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_cascadelake
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: cascadelake
-  - image: quay.io/cqnib/plain-featuretest:arch-skylake
-    annotations:
-      org.supercontainers.hardware.cpu.target: microarch
-      org.supercontainers.hardware.cpu.target.microarch: skylake
-  - image: quay.io/cqnib/plain-featuretest:arch-skylake_avx512
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_skylake_avx512
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: skylake_avx512
-  - image: quay.io/cqnib/plain-featuretest:arch-zen
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_zen
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: zen
-  - image: quay.io/cqnib/plain-featuretest:arch-zen2
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_zen2
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: zen2
-  - image: quay.io/cqnib/plain-featuretest:arch-zen3
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_zen3
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: zen3
-  - image: quay.io/cqnib/plain-featuretest:cpu-broadwell
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_broadwell
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: broadwell
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm64-graviton2
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-arm64-graviton2
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: graviton2
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm64-graviton3
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-arm64-graviton3
     annotations:
       org.supercontainers.hardware.cpu.target: microarch
       org.supercontainers.hardware.cpu.target.microarch: graviton3
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm_v6-generic
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-arm_v7-generic
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:20220715-riscv64-generic
-    annotations:
-      org.supercontainers.hardware.cpu.target: platform
-    
+  
     

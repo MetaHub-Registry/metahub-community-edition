@@ -2,9 +2,6 @@ name: pytorch/cpu
 tag: 1.13.0
 manifests:
   - image: docker.io/armswdev/pytorch-arm-neoverse:r22.12-torch-1.13.0-openblas
-    platform:
-      os: linux
-      arch: arm64
     annotations:
       org.supercontainers.hardware.cpu.arch: armv8.4-a
       org.supercontainers.hardware.cpu.acl.arch: armv8.2-a

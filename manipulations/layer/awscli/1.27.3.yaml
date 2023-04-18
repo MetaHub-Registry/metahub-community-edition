@@ -1,5 +1,9 @@
 name: "layer/awscli"
 tag: "1.27.3"
 layers:
- - image: registry.gitlab.com/qnib-pub-containers/layers/awscli:main
+ - image: registry.gitlab.com/qnib-pub-containers/layers/alpine/3/awscli:1.27.3
    rule: platform:amd64=true && system/libc:musl=true
+ - image: registry.gitlab.com/qnib-pub-containers/layers/ubuntu/20/awscli:1.27.3
+   rule: platform:amd64=true && os/ubuntu:20=true
+ - image: registry.gitlab.com/qnib-pub-containers/layers/ubuntu/22/awscli:1.27.3
+   rule: platform:amd64=true && os/ubuntu:22=true
