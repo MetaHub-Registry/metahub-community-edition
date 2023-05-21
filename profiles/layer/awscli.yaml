@@ -1,3 +1,0 @@
-rule: os:linux=true
-manipulations:
-  - label: "layer/awscli#1.27.3"
