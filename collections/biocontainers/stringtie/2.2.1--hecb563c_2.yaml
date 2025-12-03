@@ -1,0 +1,4 @@
+name: biocontainers/stringtie
+tag: 2.2.1--hecb563c_2
+manifests:
+  - image: quay.io/biocontainers/stringtie:2.2.1--hecb563c_2

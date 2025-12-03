@@ -1,0 +1,4 @@
+name: biocontainers/qualimap
+tag: 2.2.2d--1
+manifests:
+  - image: quay.io/biocontainers/qualimap:2.2.2d--1

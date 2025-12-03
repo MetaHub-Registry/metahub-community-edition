@@ -1,0 +1,6 @@
+name: "cpu" 
+tag: "cascadelake"
+type: "anno"
+op: "eq"
+key: "org.supercontainers.hardware.cpu.target.microarch"
+value: "cascadelake"

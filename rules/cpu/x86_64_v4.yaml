@@ -1,0 +1,6 @@
+name: "cpu" 
+tag: "x86_64_v4"
+type: "anno"
+op: "eq"
+key: "org.supercontainers.hardware.cpu.target.generic"
+value: "x86_64_v4"

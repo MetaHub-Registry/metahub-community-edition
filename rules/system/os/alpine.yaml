@@ -1,0 +1,6 @@
+name: "system/os" 
+tag: "alpine"
+type: "anno"
+op: "eq"
+key: "org.supercontainers.system.os"
+value: "alpine"
