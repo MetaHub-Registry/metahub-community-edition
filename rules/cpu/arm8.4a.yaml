@@ -1,0 +1,6 @@
+name: "cpu" 
+tag: "armv8.4-a"
+type: "anno"
+op: "eq"
+key: "org.supercontainers.hardware.cpu.arch"
+value: "armv8.4-a"

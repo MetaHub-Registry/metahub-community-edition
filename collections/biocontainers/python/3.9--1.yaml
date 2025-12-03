@@ -1,0 +1,4 @@
+name: biocontainers/python
+tag: 3.9--1
+manifests:
+  - image: quay.io/biocontainers/python:3.9--1
