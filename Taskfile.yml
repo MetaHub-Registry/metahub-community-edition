@@ -1,0 +1,40 @@
+version: '3'
+
+dotenv: ['.env']
+tasks:
+  default:
+    cmds:
+      - task: rules
+      - task: profiles
+      - task: manifests
+      - task: collections
+      - task: compute:manifests
+      - task: compute:manifestlists 
+  rules:
+    cmds:
+      - |
+        ~/bin/metahub-admin --config ${CONFIG_FILE} parse rules --empty-graph=all \
+          ~/src/gitlab.com/qnib-metahub/community-edition/rules/cpu/generic.yaml \
+          ~/src/gitlab.com/qnib-metahub/community-edition/rules/os/linux.yaml \
+          ~/src/gitlab.com/qnib-metahub/community-edition/rules/cpu/zen2.yaml \
+          ~/src/gitlab.com/qnib-metahub/community-edition/rules/cpu/noop.yaml
+  profiles:
+    cmds:
+      - |
+       ~/bin/metahub-admin --config ${CONFIG_FILE} parse profiles \
+         ~/src/gitlab.com/qnib-metahub/community-edition/profiles/generic.yaml \
+         ~/src/gitlab.com/qnib-metahub/community-edition/profiles/cpu/zen2.yaml
+  manifests:
+    cmds:
+      - ~/bin/metahub-admin --config ${CONFIG_FILE} parse manifests ~/src/gitlab.com/qnib-metahub/community-edition/collections/qnib/ftest/latest.yaml
+  collections:
+    cmds:
+      - ~/bin/metahub-admin --config ${CONFIG_FILE} parse collections ~/src/gitlab.com/qnib-metahub/community-edition/collections/qnib/ftest/latest.yaml  
+  compute:*:
+    vars:
+      TYPE: '{{index .MATCH 0}}'
+    preconditions:
+      - sh: '[ "{{.TYPE}}" = "manifests" ] || [ "{{.TYPE}}" = "manifestlists" ]'
+        msg: "compute type must be one of: manifests, manifestlists"
+    cmds:
+      - ~/bin/metahub-admin --config ${CONFIG_FILE} compute {{ .TYPE }}
