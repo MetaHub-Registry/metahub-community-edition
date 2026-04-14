@@ -1,9 +1,0 @@
-name: biocontainers/blast
-tag: 2.12.0--pl5262h3289130_0
-manifests:
-  - image: quay.io/cqnib/biocontainers-blast:2.12.0-amd64
-  - image: quay.io/cqnib/biocontainers-blast:2.12.0-arm64
-  - image: quay.io/cqnib/biocontainers-blast:2.12.0-icelake
-  - image: quay.io/cqnib/biocontainers-blast:2.12.0-zen2
-
-      

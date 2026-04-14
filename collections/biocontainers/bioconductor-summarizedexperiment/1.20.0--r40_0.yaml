@@ -1,5 +1,0 @@
-name: biocontainers/bioconductor-summarizedexperiment
-tag: 1.20.0--r40_0
-manifests:
-  - image: quay.io/biocontainers/bioconductor-summarizedexperiment:1.20.0--r40_0
-

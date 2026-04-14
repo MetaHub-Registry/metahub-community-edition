@@ -1,5 +1,0 @@
-name: biocontainers/fastqc
-tag: 0.11.9--0
-manifests:
-  - image: quay.io/biocontainers/fastqc:0.11.9--0
-  - image: quay.io/cqnib/spack/fastqc:0.11.9-aarch64  

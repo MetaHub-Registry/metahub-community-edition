@@ -1,5 +1,0 @@
-name: biocontainers/multiqc
-tag: 1.13--pyhdfd78af_0
-manifests:
-  - image: quay.io/biocontainers/multiqc:1.13--pyhdfd78af_0
-  - image: quay.io/cqnib/spack/multiqc:1.13-aarch64

@@ -1,4 +1,0 @@
-name: biocontainers/ucsc-bedgraphtobigwig
-tag: 377--h446ed27_1
-manifests:
-  - image: quay.io/biocontainers/ucsc-bedgraphtobigwig:377--h446ed27_1    
