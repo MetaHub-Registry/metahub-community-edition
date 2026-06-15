@@ -1,9 +1,9 @@
 name: qnib/ftest
 tag: latest
 manifests:
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-platform
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-arm64-platform
-  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-2-amd64-cpu_zen2
-    annotations:
-      org.supercontainers.hardware.cpu.target: microarch
-      org.supercontainers.hardware.cpu.target.microarch: zen2
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-10-arm64
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-10-amd64
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-10-amd64-cpu_zen2
+    profile: cpu#zen2
+  - image: registry.gitlab.com/qnib-pub-containers/qnib/plain-featuretest:3-17-10-amd64-cpu_zen3
+    profile: cpu#zen3

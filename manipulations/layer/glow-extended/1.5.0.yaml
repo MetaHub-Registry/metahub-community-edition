@@ -1,0 +1,31 @@
+label: layer/glow-extended#1.5.0
+# Extended manipulation sample — shows how the new schema can carry env,
+# workdir, user, volumes and entrypoint/cmd mutations alongside per-arch
+# layer variants.
+env:
+  HPC3_HELP: /usr/share/hpc3/help.md
+workdir: /tmp
+user: "1000:1000"
+volumes:
+  - /data
+entrypoint:
+  op: replace
+  value:
+    - /usr/bin/hpc3-help
+cmd:
+  op: replace
+  value:
+    - "echo HelloWorld"
+variants:
+  "arch:arm64=true":
+    layers:
+      - image: quay.io/cqnib/metahub-layers/hpc3/glow:1.5.0-arm64
+  "arch:amd64=true":
+    layers:
+      - image: quay.io/cqnib/metahub-layers/hpc3/glow:1.5.0-amd64
+    env:
+      GLOW_SIMD: AMD64
+    cmd:
+      op: replace
+      value:
+        - "echo HelloAMD64"
