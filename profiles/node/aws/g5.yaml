@@ -1,1 +1,1 @@
-rule: cpu:x86_64_v3=true && gpu:nvidia=true
+rule: cpu:x86_64_v4=true && gpu:nvidia=true

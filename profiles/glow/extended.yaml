@@ -1,3 +1,0 @@
-rule: os:linux=true
-manipulations:
-  - label: "layer/glow-extended#2.1.2"

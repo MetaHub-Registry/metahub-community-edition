@@ -1,17 +1,31 @@
 label: layer/glow#1.5.0
-# Extended schema (defaults + rule-keyed variants). Both quay.io upstream
-# images keep the same binary but ship per-arch — hence the variants map.
+# Glow help layer with config mutation. The injected /usr/bin/hpc3-help
+# renders the help markdown then `exec "$@"`, so the entrypoint becomes
+# hpc3-help and the cmd stays the image's intended program — for the
+# featuretest base that is /usr/bin/entry.sh (the qnib runner that prints
+# the microarchitecture line).
 #
-# The legacy flat form was:
-#   layers:
-#     - image: quay.io/cqnib/metahub-layers/hpc3/glow:1.5.0-arm64
-#       rule: arch:arm64=true
-#     - image: quay.io/cqnib/metahub-layers/hpc3/glow:1.5.0-amd64
-#       rule: arch:amd64=true
+#   docker run <img>  ->  hpc3-help /usr/bin/entry.sh
+#                      ->  glow help; exec /usr/bin/entry.sh
+#
+# NOTE: replacing cmd with `bash` makes the featuretest entrypoint chain
+# re-enter hpc3-help and loop, so we hand off to the original entry.sh.
+env:
+  HPC3_HELP: /usr/share/hpc3/help.md
+entrypoint:
+  op: replace
+  value:
+    - /usr/bin/hpc3-help
+cmd:
+  op: replace
+  value:
+    - /usr/bin/entry.sh
 variants:
   "arch:arm64=true":
     layers:
-      - image: quay.io/cqnib/metahub-layers/hpc3/glow:1.5.0-arm64
+      - image: registry.gitlab.com/qnib-pub-containers/layers/glow/base:2026-06-17-arm64
   "arch:amd64=true":
     layers:
-      - image: quay.io/cqnib/metahub-layers/hpc3/glow:1.5.0-amd64
+      - image: registry.gitlab.com/qnib-pub-containers/layers/glow/base:2026-06-17-amd64
+    env:
+      GLOW_SIMD: AMD64
