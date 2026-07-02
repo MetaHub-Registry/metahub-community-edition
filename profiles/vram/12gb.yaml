@@ -1,0 +1,4 @@
+# VRAM-tier profile (e.g. RTX 3060, 12 GB). Push/pull under `oci/12gb`;
+# `metahub-admin repackage --profile 12gb` attaches a model manipulation here so
+# a pull under this profile injects the model sized for ~12 GB VRAM.
+rule: os:linux=true
