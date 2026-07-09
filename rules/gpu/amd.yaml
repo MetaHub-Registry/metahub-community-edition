@@ -1,0 +1,6 @@
+name: "gpu"
+tag: "amd"
+type: "anno"
+op: "eq"
+key: "org.supercontainers.hardware.gpu.vendor"
+value: "amd"

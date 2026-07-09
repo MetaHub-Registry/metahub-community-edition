@@ -1,0 +1,18 @@
+# Profile `bazzite` — gaming desktop (NVIDIA RTX 3060, 12 GiB VRAM, AMD CPU).
+# Bare hardware-alias label (top-level file → label `bazzite`); VRAM capacity
+# comes from hardware.gpu.vram_gb. Push/pull under `oci/bazzite`; the resolver
+# picks the highest-precision quant that fits 12 GiB and rejects one that does not.
+#
+# MetaHub uses the `hardware:` block at composition time for:
+#   - runtime variant selection: vendor=nvidia → cuda runtime
+#   - KV-cache budget:  vram_gb − model_size_gb = available context headroom
+#   - quant-fit for `latest` tag: highest quant s.t. model_size ≤ 0.90 × vram_gb
+rule: os:linux=true && gpu:nvidia=true
+hardware:
+  gpu:
+    vendor: nvidia
+    model: ga106
+    product_name: RTX_3060
+    vram_gb: 12
+  system:
+    ram_gb: 32

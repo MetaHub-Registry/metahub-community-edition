@@ -1,4 +1,0 @@
-# VRAM-tier profile (e.g. Strix Halo, 128 GB unified memory). Push/pull under
-# `oci/128gb`; `metahub-admin repackage --profile 128gb` attaches a model
-# manipulation here so a pull under this profile injects the larger-quant model.
-rule: os:linux=true

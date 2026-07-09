@@ -1,0 +1,21 @@
+# Profile `frame` — Strix Halo APU (AMD Radeon 8060S, gfx1151, 124 GiB VRAM,
+# 128 GiB system RAM). Bare hardware-alias label (top-level file → label `frame`);
+# VRAM capacity comes from hardware.gpu.vram_gb, not the label. Push/pull under `oci/frame`.
+#
+# MetaHub uses the `hardware:` block at composition time for:
+#   - runtime variant selection: vendor=amd → rocm runtime
+#   - KV-cache budget:  vram_gb − model_size_gb = available context headroom
+#   - quant-fit for `latest` tag: highest quant s.t. model_size ≤ 0.90 × vram_gb
+rule: os:linux=true && gpu:amd=true && gpu:amd-gfx1151=true
+hardware:
+  gpu:
+    vendor: amd
+    model: gfx1151
+    product_name: Radeon_8060S_Graphics
+    gfx_family: GC_11_5_0
+    vram_gb: 124
+    cu_count: 40
+    simd_count: 80
+  system:
+    ram_gb: 128
+    cpu_cores: 32
