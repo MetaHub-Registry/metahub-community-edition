@@ -1,0 +1,6 @@
+name: "gpu"
+tag: "nvidia-sm90"
+type: "anno"
+op: "eq"
+key: "org.supercontainers.hardware.gpu.nvidia.model"
+value: "sm_90"

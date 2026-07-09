@@ -1,0 +1,18 @@
+# Declarative model entry (models/ type) for model-centric pull.
+# Served as models/qnib/minicpm5:<quant>; composed per requesting profile as
+# weights(quant) + runtime(collection) + config. See openspec/changes/model-centric-pull.
+#
+# NOTE: `runtime` references an in-metahub collection (collections/qnib/llama-server);
+# override rules (latest/config) use lep grammar — single `=`, NOT `==`.
+name: qnib/minicpm5
+runtime: qnib/llama-server
+quants:
+  - { tag: q8-0, source: harbor.example.com/library/models/minicpm5:q8-0 }
+latest:
+  default: best-fit
+  overrides:
+    - { rule: "hardware.gpu.vram_gb >= 100", quant: q8-0 }
+config:
+  default: { ctx_size: 32768, kv_cache_type: q8_0 }
+  overrides:
+    - { profile: frame, config: { ctx_size: 65536 } }

@@ -1,0 +1,6 @@
+name: "gpu"
+tag: "amd-gfx1151"
+type: "anno"
+op: "eq"
+key: "org.supercontainers.hardware.gpu.amd.model"
+value: "gfx1151"

@@ -45,10 +45,19 @@ Those annotations are used in conjuction with [archspec]() logic, so that `
 
 ### GPU
 
-| Key                  | Mandatory | Example      | Description                                                                                                |
-| -------------------- | --------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
-| `gpu.vendor`         | &check;   | nvidida, amd | If a accelerator is present, this field describes the vendor and the subsequent path within the annotation |
-| `gpu.<vendor>`.model | &check;   | a10,mi250    | The common name for the model                                                                              |
+| Key                    | Mandatory | Example              | Description                                                                                                |
+| ---------------------- | --------- | -------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `gpu.vendor`           | &check;   | `nvidia`, `amd`      | Accelerator vendor; drives subsequent key namespace and runtime variant selection (rocm vs. cuda).         |
+| `gpu.<vendor>.model`   | &check;   | `gfx1151`, `ga106`   | Chip-level model identifier. AMD: use the GFX target (e.g. `gfx1151`). NVIDIA: use GA/AD chip (e.g. `ga106`). |
+| `gpu.<vendor>.product` |           | `Radeon_8060S_Graphics` | Human-readable product name from the driver/device plugin (informational).                              |
+| `gpu.vram`             | &check;   | `12`, `124`          | Available GPU VRAM in GiB (integer). Used by MetaHub to select the best-fit quantization at pull time and to compute KV-cache headroom. |
+
+### System
+
+| Key            | Mandatory | Example | Description                                           |
+| -------------- | --------- | ------- | ----------------------------------------------------- |
+| `system.ram`   |           | `32`, `128` | System (host) RAM in GiB. Relevant for CPU-offload scenarios where layers overflow VRAM into main memory. |
+| `system.cores` |           | `32`    | Number of logical CPU cores.                          |
 
 ### System Vendor
 

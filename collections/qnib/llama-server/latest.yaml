@@ -1,0 +1,12 @@
+# Runtime collection for model-centric pull: `runtime: qnib/llama-server` on a model
+# resolves to the vendor image for the requesting profile (rocm/cuda/mlx), via the
+# existing collections profile-pin mechanism. Bare hardware-alias labels (e.g. frame).
+name: qnib/llama-server
+tag: latest
+manifests:
+  - image: registry.gitlab.com/qnib-pub-containers/ai/llama-cpp:rocm7.2.4_gfx1151
+    profile: frame
+  - image: registry.gitlab.com/qnib-pub-containers/ai/llama-cpp:cuda13-2_sm86
+    profile: bazzite
+  - image: registry.gitlab.com/qnib-pub-containers/ai/llama-cpp:cuda12-6_sm_90-real
+    profile: hopper
