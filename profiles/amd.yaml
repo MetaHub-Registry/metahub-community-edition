@@ -1,0 +1,12 @@
+# Profile `hopper` — NVIDIA Hopper datacenter GPU (H100, sm_90, 80 GiB HBM3).
+# Bare hardware-alias label (top-level file → label `hopper`); VRAM capacity
+# comes from hardware.gpu.vram_gb, not the label. Push/pull under `oci/hopper`.
+#
+# MetaHub uses the `hardware:` block at composition time for:
+#   - runtime variant selection: vendor=nvidia + sm_90 → the cuda sm_90 llama-server
+#   - KV-cache budget:  vram_gb − model_size_gb = available context headroom
+#   - quant-fit for `latest` tag: highest quant s.t. model_size ≤ 0.90 × vram_gb
+rule: os:linux=true && gpu:amd=true
+hardware:
+  gpu:
+    vendor: amd
