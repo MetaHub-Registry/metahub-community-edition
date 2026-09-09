@@ -10,3 +10,5 @@ manifests:
     profile: bazzite
   - image: registry.gitlab.com/qnib-pub-containers/ai/llama-cpp:cuda12-6_sm_90-real
     profile: hopper
+  - image: registry.gitlab.com/qnib-pub-containers/ai/llama-cpp:rocm7.2.4
+    profile: amd
