@@ -1,0 +1,5 @@
+name: biocontainers/perl
+tag: 5.26.2
+manifests:
+  - image: quay.io/biocontainers/perl:5.26.2
+    
