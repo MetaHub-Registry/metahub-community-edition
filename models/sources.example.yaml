@@ -1,0 +1,11 @@
+# Template for model sources.
+#
+# The community edition does not bundle model weights. Copy this file to
+# `sources.yaml` (or edit the model definition directly) and point each quant
+# at an OCI image in a registry you control.
+#
+# Model weights carry their own licence; see models/README.md.
+
+models:
+  qnib/minicpm5:
+    q8-0: registry.example.com/models/minicpm5:q8-0
