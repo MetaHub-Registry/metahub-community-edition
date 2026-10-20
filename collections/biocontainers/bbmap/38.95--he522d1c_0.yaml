@@ -1,0 +1,4 @@
+name: biocontainers/bbmap
+tag: 38.95--he522d1c_0
+manifests:
+  - image: quay.io/biocontainers/bbmap:38.95--he522d1c_0

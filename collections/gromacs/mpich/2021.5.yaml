@@ -1,0 +1,9 @@
+
+name: gromacs/mpich
+tag: 2021.5
+manifests:
+  - image: quay.io/cqnib/gromacs/gcc-7.3.1/2021.5/mpich:x86_64_v4
+    annotations:
+      org.supercontainers.hardware.cpu.target: generic
+      org.supercontainers.hardware.cpu.target.generic: x86_64_v4
+      org.supercontainers.mpi.implementation: mpich

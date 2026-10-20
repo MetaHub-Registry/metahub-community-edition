@@ -1,0 +1,30 @@
+name: gromacs/tmpi
+tag: 2021.5
+manifests:
+  - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:aarch64
+    annotations:
+      org.supercontainers.mpi.provider: threadmpi
+  - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v2
+    annotations:
+      org.supercontainers.mpi.provider: threadmpi
+  - image: quay.io/cqnib/gromacs/gcc-7.3.1/2021.5/tmpi:skylake_avx512
+    annotations:
+      org.supercontainers.mpi.provider: threadmpi
+      org.supercontainers.hardware.cpu.target: microarch
+      org.supercontainers.hardware.cpu.target.microarch: skylake_avx512
+  - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v3-cuda-tmpi
+    annotations:
+      org.supercontainers.hardware.cpu.target: generic
+      org.supercontainers.hardware.cpu.target.generic: x86_64_v3
+      org.supercontainers.mpi.implementation: threadmpi
+      org.supercontainers.hardware.gpu.vendor: nvidia
+  - image: quay.io/cqnib/gromacs-2021.5_gcc-7.3.1:x86_64_v4
+    annotations:
+      org.supercontainers.hardware.cpu.target: generic
+      org.supercontainers.hardware.cpu.target.generic: x86_64_v4
+      org.supercontainers.mpi.implementation: threadmpi
+  - image: quay.io/cqnib/gromacs/gcc-7.3.1/2021.5/tmpi:graviton2
+    annotations:
+      org.supercontainers.mpi.provider: threadmpi
+      org.supercontainers.hardware.cpu.target: microarch
+      org.supercontainers.hardware.cpu.target.microarch: graviton2
