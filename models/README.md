@@ -17,7 +17,10 @@ The example points at `registry.example.com/...`, which is a placeholder.
 Replace it with an OCI reference you control. The referenced image must contain
 the model layer the repackaging pipeline expects.
 
-See [`sources.example.yaml`](sources.example.yaml) for a template.
+See [`docs/model-sources.example.yaml`](../docs/model-sources.example.yaml) for a template.
+
+Note: keep example/template YAML **out of `models/`** — the ingest walks that
+tree and aborts on a filename that is not `<repo>/<tag>.yaml`.
 
 ## Licensing
 

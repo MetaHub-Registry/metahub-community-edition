@@ -6,7 +6,7 @@
   `beta`; `main` now carries them) and deleted `beta`.
 - Sanitised the model source: `harbor.example.com` replaced with a documented
   `registry.example.com` placeholder; added `models/README.md` and
-  `models/sources.example.yaml` with the model-weights licensing note.
+  `docs/model-sources.example.yaml` with the model-weights licensing note.
 - Updated the stale `ftest` tags to the existing `20220715-*` tags; verified
   the referenced `qnib-pub-containers` images are public.
 - Added Apache-2.0, NOTICE, OWNERSHIP, TRADEMARK and the community health

@@ -26,7 +26,7 @@ images or model weights.
   `registry.example.com/models/...` as a placeholder. Point it at a registry
   you control; model weights carry their own licence, independent of this
   repository's Apache-2.0. See [`models/README.md`](models/README.md) and
-  [`models/sources.example.yaml`](models/sources.example.yaml).
+  [`docs/model-sources.example.yaml`](docs/model-sources.example.yaml).
 
 ## Licence
 
