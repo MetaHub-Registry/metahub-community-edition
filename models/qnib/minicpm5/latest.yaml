@@ -1,6 +1,6 @@
 # Declarative model entry (models/ type) for model-centric pull.
 # Served as models/qnib/minicpm5:<quant>; composed per requesting profile as
-# weights(quant) + runtime(collection) + config. See openspec/changes/model-centric-pull.
+# weights(quant) + runtime(collection) + config. See the MetaHub-Registry/openspec change model-centric-pull.
 #
 # NOTE: `runtime` references an in-metahub collection (collections/qnib/llama-server);
 # override rules (latest/config) use lep grammar — single `=`, NOT `==`.
