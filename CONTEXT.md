@@ -18,3 +18,9 @@
   `beta`; it was merged with `main` and is current.
 - Model and `ftest` content exists only on this branch, not on `main` before
   the session merge.
+
+## 2026-10-23 — open-source-metahub
+
+- Added the public CI fast lane + aggregator (compose/doc checks, licence,
+  DCO, gitleaks, telemetry).
+- No model or content changes.
