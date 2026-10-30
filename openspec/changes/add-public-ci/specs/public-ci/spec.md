@@ -52,13 +52,15 @@ SHA.
 
 Container-backed tests SHALL run in a separate integration workflow rather than
 on the pull-request path. This repository currently has none, so the fast lane
-is the complete suite; a future container-backed test SHALL follow that rule.
+is the complete suite and no integration workflow exists. A future
+container-backed test SHALL get a separate release-time workflow rather than
+being added to the fast lane.
 
-#### Scenario: Release tag is pushed
+#### Scenario: A container-backed test is added
 
-- **WHEN** a release tag is pushed
-- **THEN** the integration workflow runs the full test suite with a container
-  runtime available
+- **WHEN** a test starts a container
+- **THEN** it runs only in a separate integration workflow on release tags and
+  on demand, never on a pull request
 
 ### Requirement: Secret scanning and DCO are enforced
 
@@ -79,13 +81,15 @@ SHALL fail the job. Every commit in a pull request SHALL carry a
 
 ### Requirement: Dependency licences and vulnerabilities are checked
 
-The repository has no third-party dependencies; Dependabot SHALL still track
-GitHub Actions versions. The YAML/JSON parse check is the integrity gate.
+The repository has no third-party dependencies, so there is no licence
+allowlist and no notices file. Dependabot SHALL still track GitHub Actions
+versions. The YAML/JSON parse check is the integrity gate.
 
-#### Scenario: Unlisted licence
+#### Scenario: A dependency is introduced
 
-- **WHEN** a dependency under a licence outside the allowlist is added
-- **THEN** the licence job fails and names the dependency
+- **WHEN** a change adds a third-party dependency
+- **THEN** the licence allowlist and a generated `THIRD_PARTY_NOTICES.md` SHALL
+  be added before the change merges
 
 ### Requirement: Outbound hosts are allowlisted
 

@@ -8,8 +8,9 @@ in GoCD, which contributors cannot see or run.
 
 ## What Changes
 
-Add a public, fork-safe fast lane to `community-edition` and keep the slow, container-
-backed checks in a separate release-gating workflow.
+Add a public, fork-safe fast lane to `community-edition`. The repository is
+data only (YAML and JSON), so there are no container-backed checks and no
+integration workflow.
 
 - parse every YAML and JSON document (`.github/scripts/check-yaml.py`)
 - `gitleaks` with the committed `.gitleaks.toml`
@@ -33,10 +34,9 @@ None.
 
 ## Impact
 
-- New `.github/workflows/`, `.github/scripts/`, allowlists and
-  `THIRD_PARTY_NOTICES.md`; `.github/dependabot.yml` for dependency updates.
-- Test-only changes where the container boundary had to be expressed with
-  `testing.Short()`.
+- New `.github/workflows/` and `.github/scripts/`; `.github/dependabot.yml` for
+  dependency updates. No licence allowlist or notices file: the repository has
+  no third-party dependencies.
 - No runtime behaviour, API, image or GoCD pipeline change.
 - Part of the session lane `oss-public-ci`; the visibility flip is gated on this
   lane being green.
