@@ -13,23 +13,23 @@ tasks:
   rules:
     cmds:
       - |
-        ~/bin/metahub-admin --config ${CONFIG_FILE} parse rules --empty-graph=all \
-          ~/src/gitlab.com/qnib-metahub/community-edition/rules/cpu/generic.yaml \
-          ~/src/gitlab.com/qnib-metahub/community-edition/rules/os/linux.yaml \
-          ~/src/gitlab.com/qnib-metahub/community-edition/rules/cpu/zen2.yaml \
-          ~/src/gitlab.com/qnib-metahub/community-edition/rules/cpu/noop.yaml
+        metahub-admin --config ${CONFIG_FILE} parse rules --empty-graph=all \
+          ./rules/cpu/generic.yaml \
+          ./rules/os/linux.yaml \
+          ./rules/cpu/zen2.yaml \
+          ./rules/cpu/noop.yaml
   profiles:
     cmds:
       - |
-       ~/bin/metahub-admin --config ${CONFIG_FILE} parse profiles \
-         ~/src/gitlab.com/qnib-metahub/community-edition/profiles/generic.yaml \
-         ~/src/gitlab.com/qnib-metahub/community-edition/profiles/cpu/zen2.yaml
+       metahub-admin --config ${CONFIG_FILE} parse profiles \
+         ./profiles/generic.yaml \
+         ./profiles/cpu/zen2.yaml
   manifests:
     cmds:
-      - ~/bin/metahub-admin --config ${CONFIG_FILE} parse manifests ~/src/gitlab.com/qnib-metahub/community-edition/collections/qnib/ftest/latest.yaml
+      - metahub-admin --config ${CONFIG_FILE} parse manifests ./collections/qnib/ftest/latest.yaml
   collections:
     cmds:
-      - ~/bin/metahub-admin --config ${CONFIG_FILE} parse collections ~/src/gitlab.com/qnib-metahub/community-edition/collections/qnib/ftest/latest.yaml  
+      - metahub-admin --config ${CONFIG_FILE} parse collections ./collections/qnib/ftest/latest.yaml  
   compute:*:
     vars:
       TYPE: '{{index .MATCH 0}}'
@@ -37,4 +37,4 @@ tasks:
       - sh: '[ "{{.TYPE}}" = "manifests" ] || [ "{{.TYPE}}" = "manifestlists" ]'
         msg: "compute type must be one of: manifests, manifestlists"
     cmds:
-      - ~/bin/metahub-admin --config ${CONFIG_FILE} compute {{ .TYPE }}
+      - metahub-admin --config ${CONFIG_FILE} compute {{ .TYPE }}
